@@ -17,3 +17,6 @@
     Es para configurar Apache con los redireccionamientos
     Para evitar el acceso de los usuarios a las carpetas no permitidas
     Permitir el paso de parametros y/o metodos a traves de la URL
+
+
+    .-Se inicia el repositorio Git Hub.
