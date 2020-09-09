@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <a href="index.php" class="navbar-brand">Tienda</a>
+    <a href="<?php print RUTA; ?>" class="navbar-brand">Tienda</a>
 
     <!--comprobamos si debe estar la barra de nav-->
     <?php if($datos["menu"]){
@@ -30,3 +30,16 @@
     <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
+
+        <!-- mostramos un mensaje con el detalle de los errores de validacion -->
+            <?php 
+                if(isset($datos["errores"])){
+                    if(count($datos["errores"])>0){
+                        print "<div class='alert alert-danger mt-3'>";
+                        foreach($datos['errores'] as $key=>$valor){
+                            print "<strong>*".$valor."</strong> <br>";
+                        }
+                        print "</div>";
+                    }
+                }
+            ?>
